@@ -495,3 +495,102 @@ details p{margin: 0; color: var(--muted)}
 @media (max-width: 420px){
   .header__cta{display:none}
 }
+
+
+/* PATH DIAGRAM / PLAN (그래픽형 예시) */
+.pathDiagram{
+  margin-top: 14px;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:stretch;
+  gap: 10px;
+}
+.pathDiagram__box,
+.pathDiagram__result{
+  background: rgba(255,255,255,.85);
+  border: 1px solid rgba(15,23,42,.12);
+  border-radius: 16px;
+  padding: 12px 14px;
+  min-width: 150px;
+  display:grid;
+  place-items:center;
+  box-shadow: 0 10px 22px rgba(15,23,42,.06);
+}
+.pathDiagram__result{
+  background: linear-gradient(180deg, rgba(37,99,235,.12), rgba(22,163,74,.10));
+  border-color: rgba(37,99,235,.18);
+  min-width: 160px;
+}
+.pathDiagram__t{font-weight:900; color: var(--muted); font-size: .98rem}
+.pathDiagram__v{font-size: 1.22rem; font-weight: 1000; letter-spacing:-0.02em}
+.pathDiagram__op{
+  display:grid;
+  place-items:center;
+  font-size: 1.4rem;
+  font-weight: 1000;
+  color: rgba(15,23,42,.55);
+  padding: 0 4px;
+}
+
+/* Example plan cards */
+.plan{
+  margin-top: 12px;
+  display:grid;
+  gap: 12px;
+}
+.plan__row{
+  display:grid;
+  grid-template-columns: 140px 1fr;
+  gap: 12px;
+  align-items:start;
+}
+.plan__sem{
+  font-weight: 1000;
+  color: var(--text);
+  background: rgba(15,23,42,.04);
+  border: 1px solid rgba(15,23,42,.10);
+  border-radius: 14px;
+  padding: 10px 12px;
+  text-align:center;
+}
+.plan__courses{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  align-items:flex-start;
+}
+.badge{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(37,99,235,.12);
+  border: 1px solid rgba(37,99,235,.22);
+  color: #0b2a72;
+  font-weight: 1000;
+}
+.plan__total{padding-top: 2px}
+
+/* Colored pills for courses */
+.pill--blue{
+  background: rgba(37,99,235,.12);
+  border-color: rgba(37,99,235,.22);
+  color: #0b2a72;
+}
+.pill--purple{
+  background: rgba(124,58,237,.12);
+  border-color: rgba(124,58,237,.22);
+  color: #3b158f;
+}
+.pill--green{
+  background: rgba(22,163,74,.12);
+  border-color: rgba(22,163,74,.22);
+  color: #0b4a22;
+}
+
+@media (max-width: 680px){
+  .plan__row{grid-template-columns: 1fr; }
+  .plan__sem{text-align:left}
+  .pathDiagram__box,.pathDiagram__result{min-width: 0; flex:1}
+}
